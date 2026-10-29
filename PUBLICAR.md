@@ -1,5 +1,10 @@
 # Publicar en Floot (Instructivo 44)
 
+> La versión web ya está publicada en
+> [no-me-olvido.floot.app](https://no-me-olvido.floot.app). Este instructivo
+> describe el paquete offline de un solo archivo; sus datos y su respaldo son
+> independientes de la versión web.
+
 ## Paquete listo
 
 | Dato | Valor |

@@ -4,6 +4,7 @@ Agenda de vencimientos en un solo archivo. Funciona sin internet, sin cuentas y 
 
 **Abrir:** doble clic en `index.html`.
 **Repo:** [OcampoGuillermo/appnomeolvidofloot](https://github.com/OcampoGuillermo/appnomeolvidofloot)
+**Versión web:** [no-me-olvido.floot.app](https://no-me-olvido.floot.app)
 
 ---
 
@@ -23,6 +24,14 @@ En el `localStorage` del navegador, bajo la clave `no-me-olvido:v1`.
 
 Si se borran los datos del navegador, se pierde todo. Por eso conviene
 **Ajustes → Descargar respaldo** de vez en cuando.
+
+## Versión web
+
+La app también está publicada como web app en
+[no-me-olvido.floot.app](https://no-me-olvido.floot.app). Es la misma idea,
+implementada como app React local-first: guarda en el `localStorage` de cada
+navegador y **no comparte datos** con el `index.html` offline. Elegí una de las
+dos y usá su propio respaldo.
 
 ## Publicar en Floot (Instructivo 44)
 
