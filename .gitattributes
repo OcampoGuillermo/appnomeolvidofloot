@@ -1,0 +1,3 @@
+# El paquete Floot guarda el SHA-256 del HTML: preservar los bytes exactos.
+index.html -text
+no-me-olvido.json -text
