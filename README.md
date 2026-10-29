@@ -3,6 +3,7 @@
 Agenda de vencimientos en un solo archivo. Funciona sin internet, sin cuentas y sin servidor.
 
 **Abrir:** doble clic en `index.html`.
+**Android:** instalar `NoMeOlvido-1.0.apk`.
 **Repo:** [OcampoGuillermo/appnomeolvidofloot](https://github.com/OcampoGuillermo/appnomeolvidofloot)
 **Versión web:** [no-me-olvido.floot.app](https://no-me-olvido.floot.app)
 
@@ -24,6 +25,21 @@ En el `localStorage` del navegador, bajo la clave `no-me-olvido:v1`.
 
 Si se borran los datos del navegador, se pierde todo. Por eso conviene
 **Ajustes → Descargar respaldo** de vez en cuando.
+
+## Versión Android (APK)
+
+`NoMeOlvido-1.0.apk` es la app offline envuelta con Capacitor. Se instala sin
+tienda: descargala en el celular, tocá el archivo y aceptá "Instalar de origen
+desconocido".
+
+- Funciona **sin internet** y guarda todo en el dispositivo.
+- Pide permiso de notificaciones al primer toque y programa **avisos locales**
+  a las 9:00 del día de aviso de cada vencimiento. No necesita servidor.
+- Los avisos se recalculan cada vez que abrís la app o guardás un cambio.
+- Firma: SHA-256 del APK `d0edd194a94655d71b484a3a91143869fa63e4451a059f3268cd7b388ed2b3f2`.
+
+Para recompilarlo, el proyecto Capacitor y la clave de firma están en
+`../no-me-olvido-apk` (fuera de este repo).
 
 ## Versión web
 
@@ -81,10 +97,11 @@ prueba en celular están en **`PUBLICAR.md`**.
 
 ## Límites conocidos
 
-- **No manda notificaciones push ni mails.** El aviso se ve al abrir la app
-  (la pestaña *Próximos* filtra por la ventana de aviso de cada vencimiento).
-- Es de un solo dispositivo: no sincroniza entre celular y computadora.
-  Para eso haría falta la versión con base de datos en Floot.
+- **La versión HTML y la web no mandan push ni mails.** En el APK sí hay avisos
+  locales del sistema (programados en el propio celular, sin servidor). La
+  versión web avisa solo al abrirla.
+- Cada versión es de un solo dispositivo: no sincroniza entre celular y
+  computadora. Para eso hace falta la versión con base de datos en Floot.
 - Hecha con IA y revisada por una persona: para fechas críticas, verificá
   siempre contra el papel o el sitio oficial.
 
@@ -93,6 +110,7 @@ prueba en celular están en **`PUBLICAR.md`**.
 | Archivo | Qué es |
 | --- | --- |
 | `index.html` | La app completa (HTML + CSS + JS, sin dependencias externas). |
+| `NoMeOlvido-1.0.apk` | App Android offline con avisos locales programados. |
 | `empaquetar.py` | Genera el `.json` con base64, `bytes` y `sha256` para publicar en Floot. |
 | `PUBLICAR.md` | Prompt para Floot, verificación del hash y prueba en celular. |
 | `checkpack.py` | Verifica que el `.json` reconstruya el HTML byte a byte. |
