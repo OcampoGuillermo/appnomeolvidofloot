@@ -1,0 +1,10 @@
+﻿import base64, hashlib, json, pathlib, sys
+sys.stdout.reconfigure(encoding='utf-8')
+h = pathlib.Path('index.html').read_bytes()
+p = json.loads(pathlib.Path('no-me-olvido.json').read_text(encoding='utf-8'))
+d = base64.b64decode(p['contenido_base64'])
+print('sha256 html :', hashlib.sha256(h).hexdigest())
+print('sha256 json :', p['sha256'])
+print('bytes       :', p['bytes'], '| len', len(h))
+print('generado    :', p['generado'])
+print('payload ok  :', hashlib.sha256(d).hexdigest() == hashlib.sha256(h).hexdigest())

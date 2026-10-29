@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+
+# Scripts de trabajo, no forman parte del entregable
+patch*.py
+auditurls.py
+checkutf.py
+grepfont.py
