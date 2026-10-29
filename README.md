@@ -3,6 +3,7 @@
 Agenda de vencimientos en un solo archivo. Funciona sin internet, sin cuentas y sin servidor.
 
 **Abrir:** doble clic en `index.html`.
+**Repo:** [OcampoGuillermo/appnomeolvidofloot](https://github.com/OcampoGuillermo/appnomeolvidofloot)
 
 ---
 
